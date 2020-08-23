@@ -1,0 +1,39 @@
+<!-- 
+<section style="padding-top:72px">
+        <p>page-asset-list works!</p>
+</section> -->
+
+<!-- ======= landing-options Section ======= -->
+<section id="page-asset-list" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+        <auction-filter-section></auction-filter-section>
+
+        <!-- <div class="row mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250" id="category-section"> -->
+    </div>
+</section>
+<!-- End landing-options -->
+
+<section style="padding-top: 35px;">
+    <div class="container-fluid" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Auction Assets</h2>
+            <p style="background: rgba(26, 70, 104, 0.51); color:white">Check Assets for Search
+                <!-- <span class="float-right"><a href="#" class="btn btn-primary ">Inquiry</a></span> -->
+            </p>
+
+        </div>
+    </div>
+    <!-- <div class="card-deck"> -->
+    <div class="">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="alert alert-warning" role="alert" *ngIf="errorMessage">{{ errorMessage }}</div>
+            <div *ngFor="let asset of AuctionAssets" class="col-sm-6 col-lg-3 col-md-4 auction-asset-item">
+                <auction-asset-item [asset]="asset"></auction-asset-item>
+
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<!-- <div class="thumbnail">
+    <span ><img src="../../assets/img/320x150.png" alt="" class="img-fluid"></span>
+    <div class="caption">
+        <h4><a [routerLink]="['/products', asset.id]">{{ asset.bankName }}</a></h4>
+        <h5 class="pull-right">{{ asset.address}}</h5>
+        <h5 class="pull-right">{{ asset.price | currency : 'INR':'symbol-narrow' }}</h5 >
+        <h6>{{ asset.auctionStartDate }}</h6>
+    </div>
+    <div class="ratings">
+      <!-- <auction-stars [rating]="asset.rating"></auction-stars> -->
+   <!-- </div>
+  </div> -->
+  
+  <!-- <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="../../assets/img/320x150.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+  <div class="card" style="width: 100%;" data-aos="fade-up" data-aos-delay="1000">
+        <!-- <img class="card-img-top" src="../../assets/img/320x150.png" alt="Card image cap"> -->
+        <div class="text-center" [style.display]="asset.category=='Residential' ? 'block' : 'none'"><i class="card-img-top ri-home-8-fill display-1 img-representation"></i></div>
+        <div class="text-center" [style.display]="asset.category=='Commercial' ? 'block' : 'none'"><i class="card-img-top ri-community-fill display-1 img-representation"></i></div>
+        <div class="text-center" [style.display]="asset.category=='Industrial' ? 'block' : 'none'"><i class="card-img-top ri-building-3-fill display-1 img-representation"></i></div>
+        
+        <div class="card-body">
+          <h5 class="card-title">{{ asset.bankName }}</h5>
+          <h6 class="pull-right">{{ asset.address}}</h6>
+          <h6 class="pull-right">Reserved Price: {{ asset.price | currency : 'INR':'symbol-narrow' }}</h6 >
+          <h6>Auction Date: {{ asset.auctionStartDate }}</h6>
+        <a href="#" class="btn btn-primary">Inquiry</a>
+        </div>
+      </div>
